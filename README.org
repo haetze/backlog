@@ -1,0 +1,46 @@
+#+TITLE: Eternal Backlog
+#+DATE: 16 Feb 2022
+#+AUTHOR: Richard Stewing
+#+EMAIL: richard.stewing@udo.edu
+#+LATEX_CLASS: article
+# ############################################
+# #                                          #
+# #               English                    #
+# #                                          #
+# ############################################
+#+LATEX_HEADER: \usepackage[english]{babel}
+#+LATEX_HEADER: \usepackage{thmtools}
+#+LATEX_HEADER: \declaretheorem[name=Proof, refname={proof}, Refname={Proof}]{beweis}
+#+LATEX_HEADER: \declaretheorem[name=Definition, refname={definition}, Refname={Definition}]{definition}
+#+LATEX_HEADER: \declaretheorem[name=Theorem, refname={theorem}, Refname={Theorem}]{theorem}
+#+LATEX_HEADER: \topmargin-2cm
+#+LATEX_HEADER: \oddsidemargin=-.8cm
+#+LATEX_HEADER: \evensidemargin=-.8cm
+#+LATEX_HEADER: \textheight24.5cm
+#+LATEX_HEADER: \textwidth18cm
+#+LATEX_HEADER: \footskip2cm
+#+LATEX_HEADER: \parindent0cm
+#+LATEX_HEADER: \parskip.2cm
+#+LATEX_HEADER: \parsep.2cm
+#+LATEX_HEADER: \usepackage[affil-it]{authblk}
+#+LATEX_HEADER: \author[1]{Richard Stewing}
+#+LATEX_HEADER: \affil[1]{Department of Computer Science, TU Dortmund University\\ \href{mailto:richard.stewing@tu-dortmund.de}{richard.stewing@tu-dortmund.de}}
+#+LANGUAGE: en
+
+#+OPTIONS: author:nil toc:nil
+
+
+* Formalization of Dynamic Analyses
+Formalizing dynamic Analyses independent of the execution.
+Important properties:
+1. Independent of Execution
+2. Combination of multiple analyses
+
+* Taint Implementation
+* LTL(RA)
+* Concurrent RAs
+** Formalizing
+** Implementation for Micro-Services?
+* Dynamic Concurrent RAs
+** Formalizing
+** Implementation for Erlang or similar 

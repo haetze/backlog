@@ -40,8 +40,9 @@ Important properties:
 
 * LTL(RA)
 ** Connection Session Types
-- (Limited) Dependent Session Types?
-
+- [[*(Limited) Dependent Session Types?][(Limited) Dependent Session Types?]]
+- [[./misc/CFSM.pdf][Communicating Finite State Machines for Protocols]].
+  
 * Concurrent RAs
 ** Formalizing
 ** Implementation for Micro-Services?
@@ -50,6 +51,14 @@ Important properties:
 ** Formalizing
 ** Implementation for Erlang or similar 
 
+* Session Types
+** (Limited) Dependent Session Types?
+
 * BA/MA Topics
 ** Verified Purely Functional Data Structures (BA)
-
+- [[./misc/purely-functional-ds.pdf][Purely Functional Data Structures - Thesis]]
+- [[./misc/lazy-eval-in-amort-ds.pdf][The Role of Lazy Evaulation in Amortizes Data Structures]]
+- [[https://ucsd-progsys.github.io/liquidhaskell-blog/][Liquid Haskell]], [[https://ucsd-progsys.github.io/liquidhaskell-tutorial/Tutorial_09_Case_Study_Lazy_Queues.html][Okasaki's lazy queue]] 
+** Session Types in OCaml, System Design, Implementation and Verification (BA/MA)
+- [[./misc/session-types-ocaml.pdf][Using Session Types in OCaml]]
+- [[./misc/session-types.pdf][Session Types (Foundation)]]

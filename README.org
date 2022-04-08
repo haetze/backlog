@@ -37,10 +37,19 @@ Important properties:
 2. Combination of multiple analyses
 
 * Taint Implementation
+
 * LTL(RA)
+** Connection Session Types
+- (Limited) Dependent Session Types?
+
 * Concurrent RAs
 ** Formalizing
 ** Implementation for Micro-Services?
+
 * Dynamic Concurrent RAs
 ** Formalizing
 ** Implementation for Erlang or similar 
+
+* BA/MA Topics
+** Verified Purely Functional Data Structures (BA)
+

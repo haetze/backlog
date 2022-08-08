@@ -54,6 +54,9 @@ Important properties:
 * Session Types
 ** (Limited) Dependent Session Types?
 
+* Piclog
+- Logic for the description of pictures. 
+
 * BA/MA Topics
 ** Verified Purely Functional Data Structures (BA)
 - [[./misc/purely-functional-ds.pdf][Purely Functional Data Structures - Thesis]]
@@ -62,3 +65,4 @@ Important properties:
 ** Session Types in OCaml, System Design, Implementation and Verification (BA/MA)
 - [[./misc/session-types-ocaml.pdf][Using Session Types in OCaml]]
 - [[./misc/session-types.pdf][Session Types (Foundation)]]
+

@@ -70,3 +70,5 @@ Important properties:
 - [[https://www.hpi.uni-potsdam.de/giese/public/selfadapt/exemplars/dragonfly/][Dragenfly]]
 ** Self-Adaptive Systems - Models (MA)
 - Requires work from me.
+** Gradual Refinement Types
+- [[https://dl.acm.org/doi/abs/10.1145/3093333.3009856?casa_token=4czo68TLvEsAAAAA:uvTsi2nslEdfLgA9oj7hZe0BrKv9eNCCHnWCedcMdDTJLNDpcDeLTfF7VVxmVHgat4MvCYupLiK3FQ][Gradual Refinement Types]]

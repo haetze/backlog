@@ -72,3 +72,54 @@ Important properties:
 - Requires work from me.
 ** Gradual Refinement Types
 - [[https://dl.acm.org/doi/abs/10.1145/3093333.3009856?casa_token=4czo68TLvEsAAAAA:uvTsi2nslEdfLgA9oj7hZe0BrKv9eNCCHnWCedcMdDTJLNDpcDeLTfF7VVxmVHgat4MvCYupLiK3FQ][Gradual Refinement Types]]
+** Holes in Programming Languages
+- [[http://strictlypositive.org/thesis.pdf][Thesis by McBride]]
+- [[https://www.cambridge.org/core/services/aop-cambridge-core/content/view/418409138B4452969AC0736DB0A2C238/S095679681300018Xa.pdf/idris-a-general-purpose-dependently-typed-programming-language-design-and-implementation.pdf][Idris: Design and Implementation by Brady]]
+- [[https://dl.acm.org/doi/pdf/10.1145/3586048][Live Pattern Matching with Typed Holes by Yuan]]
+** Terminating Programs in Erlang
+Systems in Erlang consists of a collection of loosely dependent processes communicating via messages.
+This loose coupling allows for highly concurrent soft-real-time systems to be deployed.
+On the other hand, processes send each other messages and sometimes wait for a related response.
+If one process runs into an endless loop, the process can't handle new messages and consequently does not respond to any message.
+This locking potential is conventionally handled by using timeouts when waiting on a respond.
+An example of a generic server with an infinite loop implemented in Erlang is given below.
+#+begin_src erlang
+-module(inf_gen_server).
+-behaviour(gen_server).
+
+-export([start_link/0]).
+-export([cast/1]).
+-export([init/1, handle_call/3, handle_cast/2]).
+
+start_link() ->
+    gen_server:start_link({local, inf_gen_server}, inf_gen_server, [], []).
+
+cast(ID) ->
+    gen_server:cast(inf_gen_server, ID),
+    send.
+
+init(_Args) ->
+    {ok, state}.
+
+handle_call(ID, _From, state) ->
+    io:format("~p~n", [ID]),
+    loop(ID).
+
+handle_cast(ID, state) ->
+    io:format("~p~n", [ID]),
+    loop(ID).
+
+loop(C) ->
+    loop(C+1).
+#+end_src
+
+An alternative is termination checking parts of your program.
+Many language, especially in the proof-oriented domain, deploy termination checking to ensure the soundness of their programs.
+Others, e.g. Rust, check whether their case-statements are complete to ensure no exceptional control-flow.
+This work will attempt to study termination checking in a restricted context.
+1. We only consider generic servers, i.e. module implementing the =gen_server= behavior.
+2. Only simple generic servers are considered, i.e. servers that do not spawn processes themselves.
+3. States are restricted to tuples ={State_Atom, KV_Map}=, where keys are atoms and values are integers.
+4. Conditionals only consist of equalities on atoms, integer comparatives and their boolean connectives.
+ 
+  
